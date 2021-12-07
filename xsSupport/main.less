@@ -1,0 +1,102 @@
+//主色调
+@bgMain1:rgb(26, 26, 26);
+@bgLeftPan:rgb(29, 29, 29);
+@bgLeftPanTitle:rgb(15, 15, 15);
+@fgLeftPan:rgb(207, 207, 207);
+@fgLeftPanTitle:rgb(255, 166, 0);
+@hvBgLeftPan:rgb(43, 43, 43);
+@fgLiHover:rgb(255, 217, 0);
+
+@bgJumpButton:rgba(0,0,0,0.2);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::selection{
+    background-color: rgba(128, 128, 128, 0.308);
+}
+body{
+    background-color: @bgMain1;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    .leftPan{
+        position: absolute;
+        left: 0;
+        top: -20px;
+        width: 30vw;
+        height: calc(100vh + 40px);
+        padding: 20px 0;
+        overflow: hidden;
+        background-color: @bgLeftPan;
+        //box-shadow: 5px 0 8px 0 rgba(0, 0, 0, 0.2);
+        z-index: 998;
+        .title{
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background-color: @bgLeftPanTitle;
+            letter-spacing: 2px;
+            color: @fgLeftPanTitle;
+            //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            z-index: 999;
+        }
+        ul{
+            overflow-x: hidden;
+            overflow-y: scroll;
+            &::-webkit-scrollbar{
+                display: none;
+            }
+            li{
+                transition: 0.2s ease-in-out;
+                cursor: pointer;
+                &:hover{
+                    //background-color: @hvBgLeftPan;
+                    p{
+                        color: @fgLiHover;
+                    }
+                }
+                p{
+                    padding: 10px;
+                    letter-spacing: 2px;
+                    color: @fgLeftPan;
+                }
+            }
+        }
+    }
+    .rightPan{
+        position: absolute;
+        left: 30vw;
+        top: 0;
+        width: 70vw;
+        height: 100vh;
+        iframe{
+            width: 100%;
+            height: 100%;
+            border: none;
+            outline: none;
+        }
+    }
+    .jump{
+        position: absolute;
+        left: 30vw;
+        top: 0;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        letter-spacing: 2px;
+        color: @fgLeftPan;
+        text-align: center;
+        background-color: @bgJumpButton;
+        backdrop-filter: blur(2px);
+        cursor: pointer;
+        opacity: 0;
+        transition: 0.2s ease-in-out;
+        &:hover{
+            opacity: 1;
+        }
+    }
+}
