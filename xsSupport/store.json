@@ -1,6 +1,6 @@
 {
     "identifierLength":4,
-    "projectName":"learning-less",
+    "projectName":"learning-shader-p5",
     "author":"vezzzing",
     "startDate":"2021.12.5",
     "displayLessonIndex":2,
@@ -129,6 +129,13 @@
             "path":"webcamDisplacement/main",
             "name":"相机转置",
             "date":"?",
+            "ips":1
+        },
+        {
+            "identifier":"ADH",
+            "path":"rgb2hsb/main",
+            "name":"rgb&hsb转化",
+            "date":"2021.12.10",
             "ips":1
         }
     ]
