@@ -4,138 +4,183 @@
     "author":"vezzzing",
     "startDate":"2021.12.5",
     "displayLessonIndex":2,
+    "showCode":true,
+    "codeShow":{
+        "paths":[
+            {
+                "pathName":"sketch.js",
+                "class":"preJS"
+            },
+            {
+                "pathName":"vez.frag",
+                "class":"preFRAG"
+            },
+            {
+                "pathName":"vez.vert",
+                "class":"preVERT"
+            }
+        ]
+    },
     "lessonList":[
         {
             "identifier":"AAA",
-            "path":"shaderhw/main",
+            "path":"shaderhw",
             "name":"shader hello world",
             "date":"?",
             "ips":1
         },
         {
             "identifier":"AAB",
-            "path":"shaderFunction/main",
+            "path":"shaderFunction",
             "name":"shader函数",
             "date":"?",
             "ips":1
         },
         {
             "identifier":"ABA",
-            "path":"basicTextureCood/main",
+            "path":"basicTextureCood",
             "name":"基本坐标映射",
             "date":"?",
             "ips":1
         },
         {
             "identifier":"ABB",
-            "path":"tiles/main",
+            "path":"tiles",
             "name":"基本位置渐变",
             "date":"?",
             "ips":1
         },
         {
             "identifier":"ABC",
-            "path":"gradient/main",
+            "path":"gradient",
             "name":"基本渐变",
             "date":"?",
             "ips":1
         },
         {
             "identifier":"ABD",
-            "path":"random/main",
+            "path":"random",
             "name":"随机数的产生",
             "date":"?",
             "ips":1
         },
         {
             "identifier":"ABE",
-            "path":"noise/main",
+            "path":"noise",
             "name":"生成噪音",
             "date":"?",
             "ips":1
         },
         {
             "identifier":"ABF",
-            "path":"checker/main",
+            "path":"checker",
             "name":"生成格子",
             "date":"?",
             "ips":1
         },
         {
             "identifier":"ACA",
-            "path":"uniformMouse/main",
+            "path":"uniformMouse",
             "name":"uniform传参",
             "date":"?",
             "ips":1
         },
         {
             "identifier":"ACB",
-            "path":"texture2d/main",
+            "path":"texture2d",
             "name":"texture2D",
             "date":"?",
             "ips":1
         },
         {
             "identifier":"ACC",
-            "path":"time/main",
+            "path":"time",
             "name":"将时间作为参数",
             "date":"?",
             "ips":1
         },
         {
             "identifier":"ADA",
-            "path":"webcamStart/main",
+            "path":"webcamStart",
             "name":"webcam hello world",
             "date":"?",
             "ips":1
         },
         {
             "identifier":"ADB",
-            "path":"webcamRGBsplit/main",
+            "path":"webcamRGBsplit",
             "name":"webcam分离RGB",
             "date":"?",
             "ips":1
         },
         {
             "identifier":"ADC",
-            "path":"webcamSinWave/main",
+            "path":"webcamSinWave",
             "name":"webcam三角函数波浪",
             "date":"?",
             "ips":1
         },
         {
             "identifier":"ADD",
-            "path":"webcamMirror/main",
+            "path":"webcamMirror",
             "name":"webcam镜子",
             "date":"?",
             "ips":1
         },
         {
             "identifier":"ADE",
-            "path":"webcamStripes/main",
+            "path":"webcamStripes",
             "name":"webcam色带",
             "date":"?",
             "ips":1
         },
         {
             "identifier":"ADF",
-            "path":"webcamPixelate/main",
+            "path":"webcamPixelate",
             "name":"webcam像素化",
             "date":"?",
             "ips":1
         },
         {
             "identifier":"ADG",
-            "path":"webcamDisplacement/main",
+            "path":"webcamDisplacement",
             "name":"相机转置",
             "date":"?",
             "ips":1
         },
         {
             "identifier":"ADH",
-            "path":"rgb2hsb/main",
+            "path":"rgb2hsb",
             "name":"rgb&hsb转化",
             "date":"2021.12.10",
+            "ips":1
+        },
+        {
+            "identifier":"ADI",
+            "path":"singlePassBlur",
+            "name":"单通道模糊",
+            "date":"2021.12.10",
+            "ips":1
+        },
+        {
+            "identifier":"ADJ",
+            "path":"threshold",
+            "name":"二值化",
+            "date":"2021.12.11",
+            "ips":1
+        },
+        {
+            "identifier":"ADK",
+            "path":"frameDifference",
+            "name":"显示帧差",
+            "date":"2021.12.11",
+            "ips":1
+        },
+        {
+            "identifier":"ADL",
+            "path":"toGrayScale",
+            "name":"转化为灰度图",
+            "date":"2021.12.11",
             "ips":1
         }
     ]

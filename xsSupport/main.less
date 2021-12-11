@@ -1,16 +1,22 @@
-//主色调
-@bgMain1:rgb(26, 26, 26);
-@bgLeftPan:rgb(29, 29, 29);
-@bgLeftPanTitle:rgb(15, 15, 15);
-@fgLeftPan:rgb(207, 207, 207);
-@fgLeftPanTitle:rgb(255, 166, 0);
-@hvBgLeftPan:rgb(43, 43, 43);
-@fgLiHover:rgb(255, 217, 0);
+@bgMain1:rgb(26, 26, 26);//背景颜色
 
-@bgJumpButton:rgba(0,0,0,0.2);
+@bgLeftPan:rgb(29, 29, 29);//左边的项目选择面板背景色
+@fgLeftPan:rgb(207, 207, 207);//项目名字的字色
 
-@bgCodePan:rgba(29, 29, 29, 0.719);
-@bgCodePanCloseButton:rgba(0,0,0,0.2);
+@bgLeftPanTitle:rgb(15, 15, 15);//项目选择面板标题背景色
+@fgLeftPanTitle:rgb(255, 166, 0);//项目选择面板标题的字色
+
+@hvBgLeftPan:rgb(29, 29, 29);//左边的项目选择面板悬停背景色
+@hvFgBgLeftPan:rgb(255, 217, 0);//左边的项目选择面板悬停字色
+
+@bgCodePan:rgba(29, 29, 29, 0.719);//代码面板背景色
+@fgCodePan:white;//代码面板字色
+@bcCodePan:2px solid black;//代码面板边框
+
+@bgCodePanCloseButton:rgba(0,0,0,0.2);//关闭代码面板按钮背景色
+@fgCodePanCloseButton:white;//关闭代码面板按钮字色
+@hvFgCodePanCloseButton:yellow;//悬停关闭代码面板按钮字色
+
 *{
     margin: 0;
     padding: 0;
@@ -30,11 +36,10 @@ body{
         left: 0;
         top: -20px;
         width: 25vw;
-        height: calc(100vh + 40px);
-        padding: 20px 0;
+        height: calc(100vh + 20px);
+        padding-top: 20px;
         overflow: hidden;
         background-color: @bgLeftPan;
-        //box-shadow: 5px 0 8px 0 rgba(0, 0, 0, 0.2);
         z-index: 998;
         .title{
             width: 100%;
@@ -44,12 +49,12 @@ body{
             background-color: @bgLeftPanTitle;
             letter-spacing: 2px;
             color: @fgLeftPanTitle;
-            //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             z-index: 999;
         }
         ul{
             overflow-x: hidden;
             overflow-y: scroll;
+            height:calc(100vh - 50px);
             &::-webkit-scrollbar{
                 display: none;
             }
@@ -57,9 +62,9 @@ body{
                 transition: 0.2s ease-in-out;
                 cursor: pointer;
                 &:hover{
-                    //background-color: @hvBgLeftPan;
+                    background-color: @hvBgLeftPan;
                     p{
-                        color: @fgLiHover;
+                        color: @hvFgBgLeftPan;
                     }
                 }
                 p{
@@ -92,14 +97,14 @@ body{
         line-height: 40px;
         text-align: center;
         background-color: transparent;
-        color: white;
+        color: @fgCodePanCloseButton;
         transition: 0.2s ease-in-out;
         font-size: 30px;
         z-index: 1000;
         transform: rotate(135deg);
         cursor: pointer;
         &:hover{
-            color: yellow;
+            color: @hvFgCodePanCloseButton;
         }
     }
     .add{
@@ -111,14 +116,14 @@ body{
         line-height: 40px;
         text-align: center;
         background-color: @bgCodePanCloseButton;
-        color: white;
+        color: @fgCodePanCloseButton;
         transition: 0.2s ease-in-out;
         font-size: 30px;
         z-index: 1000;
         transform: rotate(0);
         cursor: pointer;
         &:hover{
-            color: yellow;
+            color: @hvFgCodePanCloseButton;
         }
     }
     .codePan{
@@ -133,15 +138,14 @@ body{
         transition: 0.5s ease-in-out;
         pre{
             width: 100%;
-            height: 33.33%;
-            border: 2px solid black;
+            border: @bcCodePan;
             overflow: scroll;
             padding-left: 4px;
             &::-webkit-scrollbar{
                 display: none;
             }
             code{
-                color: white;
+                color: @fgCodePan;
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 font-size: 10px;
             }
