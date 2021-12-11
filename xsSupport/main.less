@@ -1,3 +1,4 @@
+//{颜色设置}
 @bgMain1:rgb(26, 26, 26);//背景颜色
 
 @bgLeftPan:rgb(29, 29, 29);//左边的项目选择面板背景色
@@ -17,6 +18,10 @@
 @fgCodePanCloseButton:white;//关闭代码面板按钮字色
 @hvFgCodePanCloseButton:yellow;//悬停关闭代码面板按钮字色
 
+//{尺寸设置}
+@wdLeftPan:25vw;
+@wdCodePan:400px;
+
 *{
     margin: 0;
     padding: 0;
@@ -35,7 +40,7 @@ body{
         position: absolute;
         left: 0;
         top: -20px;
-        width: 25vw;
+        width: @wdLeftPan;
         height: calc(100vh + 20px);
         padding-top: 20px;
         overflow: hidden;
@@ -79,7 +84,7 @@ body{
         position: absolute;
         left: 25vw;
         top: 0;
-        width: 75vw;
+        width: calc(100vw - @wdLeftPan);
         height: 100vh;
         iframe{
             width: 100%;
@@ -131,7 +136,7 @@ body{
         z-index: 999;
         right: 0;
         top: 0;
-        width: 30vw;
+        width: @wdCodePan;
         height: 100vh;
         background-color: @bgCodePan;
         backdrop-filter: blur(2px);
