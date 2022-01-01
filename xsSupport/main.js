@@ -8,6 +8,16 @@ function initPage(){/**初始化页面 */
                 }
             }
             {/**生成代码面板 */
+                if(store.codeShow.paths.length!=0){
+                    document.body.innerHTML+=
+                    `
+                    <div class="buttonContainer">
+                        <div class="cbutton close">+</div>
+                    </div>
+                    <div class="codePan">
+                    </div>
+                    `
+                }    
                 for(let i=0;i<store.codeShow.paths.length;i++){
                     addCodeShow(store.codeShow.paths[i],store.codeShow.paths.length);
                 }
@@ -35,17 +45,34 @@ function registerAction(){/**注册动作 */
         }
     }
     {/**切换代码面板【事件委派】 */
-        document.querySelector(".buttonContainer").onclick=function(e){
-            if(e.target.className=="close"){
-                document.querySelector(".codePan").style.height="0px";
-                document.querySelector(".codePan").style.top="-20px";
-                e.target.classList.remove("close");
-                e.target.classList.add("add");
-            }else{
-                document.querySelector(".codePan").style.height="100vh";
-                document.querySelector(".codePan").style.top="0";
-                e.target.classList.remove("add");
-                e.target.classList.add("close");
+        document.body.onclick=function(e){
+            let list=e.target.classList;
+            let isButton=false;
+            for(let i=0;i<list.length;i++){
+                if(list[i]=="cbutton"){
+                    isButton=true;
+                    break;
+                }
+            }
+            if(isButton){
+                let isCloseing=false;
+                let newlist=e.target.classList;
+                for(let i=0;i<newlist.length;i++){
+                    if(list[i]=="close"){
+                        isCloseing=true;
+                    }
+                }
+                if(isCloseing){
+                    document.querySelector(".codePan").style.height="0px";
+                    document.querySelector(".codePan").style.top="-20px";
+                    e.target.classList.remove("close");
+                    e.target.classList.add("add");
+                }else{
+                    document.querySelector(".codePan").style.height="100vh";
+                    document.querySelector(".codePan").style.top="0";
+                    e.target.classList.remove("add");
+                    e.target.classList.add("close");
+                }
             }
         }
     }
